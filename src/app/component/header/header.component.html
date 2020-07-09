@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Navbar</a>
+    <!-- <span >{{userObj.name}}</span> -->
+    <a [routerLink]="['/add-money']" routerLinkActive="router-link-active" >Add Money</a>
+    <a [routerLink]="['/do-transaction']" routerLinkActive="router-link-active" >Do Transaction</a>
+    
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  

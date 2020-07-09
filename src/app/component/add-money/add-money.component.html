@@ -1,0 +1,24 @@
+<p>add-money works!</p>
+
+<div class="container">
+    <div class=" col-md-6 offset-md-6">
+        <mat-card>
+            <form  [formGroup]="addMoneyForm" novalidate (ngSubmit)="addMoney()">
+                <label for="">Amount</label>
+                <br>
+                <mat-form-field>
+                    <input type="number" matInput placeholder="Enter Amount" required formControlName="amount" class="form-control">
+                </mat-form-field>
+                <mat-error *ngIf="addMoneyForm.hasError('amount')&& addMoneyForm.controls.amount.invalid && addMoneyForm.controls.amount.touched && !addMoneyForm.hasError('required')">
+                    Please enter a valid email address
+                  </mat-error>
+                <br>
+                <div>
+                    <button mat-raised-button type="submit" color='primary'>Submit</button>
+                    <button mat-raised-button type="reset" color='default'>Reset</button>
+
+                </div>
+            </form>
+        </mat-card>
+    </div>
+</div>
